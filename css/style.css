@@ -16,7 +16,6 @@ a {
     text-align: center
 }
 
-.link {
-    display: flex;
-    justify-content: space-between;
+div {
+    text-align: center
 }

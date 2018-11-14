@@ -9,4 +9,9 @@ h1 {
 
 p {
     color: red;
+    text-align: center
+}
+
+a {
+    text-align: center
 }

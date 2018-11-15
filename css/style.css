@@ -17,22 +17,25 @@ a {
     text-align: center
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    align-content: center;
-    background-color: #000000;
+.table {
+    display: table;
+    margin: 0 auto;
 }
 
-li {
+ul#nav {
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+    background-color: #333333;
+}
+
+ul#nav li {
     float: left;
     align-self: center;
 }
 
-li a {
-    font-size = 200%;
+ul#nav li a {
+    font-size: 200%;
     display: inline-block;
     color: white;
     text-align: center;
@@ -40,6 +43,6 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #111111;
+ul#nav li a:hover {
+    background-color: #000000;
 }

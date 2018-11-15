@@ -36,11 +36,11 @@ ul#nav li {
 }
 
 ul#nav li a {
-    font-size: 200%;
+    font-size: 100%;
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 32px;
+    padding: 16px;
     text-decoration: none;
 }
 

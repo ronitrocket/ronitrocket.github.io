@@ -23,15 +23,16 @@ a {
 }
 
 ul#nav {
-    min-width: 696px;
-    list-style: none;
-    padding-top: 20px;
-    background-color: #333333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    align-content: center;
+    background-color: #000000;
 }
 
 ul#nav li {
-    float: left;
-    align-self: center;
+    display: inline;
 }
 
 ul#nav li a {
@@ -44,5 +45,5 @@ ul#nav li a {
 }
 
 ul#nav li a:hover {
-    background-color: #000000;
+    background-color: #111111;
 }

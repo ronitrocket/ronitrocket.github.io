@@ -22,7 +22,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    align-items: center;
+    align-content: center;
     background-color: #000000;
 }
 

@@ -15,10 +15,11 @@ p {
     color: black;
     text-align: justify;
     font-family: Arial;
+    padding: 10px;
 }
 
 h3 {
-    padding: 0px;
+    padding: 5px;
     text-align: center;
     font-family: Arial;
 }
@@ -26,6 +27,7 @@ h3 {
 a {
     text-align: center;
     font-family: Arial;
+    padding: 0px;
 }
 
 .header {

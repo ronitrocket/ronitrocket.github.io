@@ -72,7 +72,7 @@ a {
 }
 
 .main {
-    height: 75vh;
+    height: 150vh;
     width: 10vh;
     flex: 1;
     background-color: white;
@@ -80,9 +80,7 @@ a {
 }
 
 .img {
-    background-color: #000;
-    width: 30%;
-    padding: 20px;
+    width: 40%;
 }
 
 ul {

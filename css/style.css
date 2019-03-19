@@ -72,7 +72,7 @@ a {
 }
 
 .main {
-    height: 150vh;
+    height: 170vh;
     width: 10vh;
     flex: 1;
     background-color: white;
@@ -85,6 +85,22 @@ a {
     flex: 1;
     background-color: white;
     padding: 20px;
+}
+
+.game {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.game iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .card {

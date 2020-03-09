@@ -1,0 +1,5 @@
+x=msgbox("Virus detected.", 0+16, "A virus has been detected, and this file has been disabled.")
+x=msgbox("Virus detected.", 4+32, "Would you like to delete this file?")
+x=msgbox("Virus deleting...", 0+64, "This file is very dangerous, virus deleted.")
+x=msgbox("Virus", 0+16, "WARNING: Virus could not be deleted.")
+x=msgbox("Virus", 2+16, "Forcing shutdown on next input.")

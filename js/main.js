@@ -9,5 +9,5 @@ let currentText = -1;
 
 
 const textInterval = setInterval(() => {
-  document.getElementById('textCarousel').text = text[(++currentText) % text.length];
+  document.getElementById('textCarousel').innerHTML = text[(++currentText) % text.length];
 }, 2000);

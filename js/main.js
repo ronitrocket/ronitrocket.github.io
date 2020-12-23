@@ -1,8 +1,8 @@
 const text = [
-  '\nPlay my games!',
-  '\nCheck out the downloads!',
-  '\n..Find any secrets :)',
-  '\nCheck out my YouTube and Github!',
+  '\n\nPlay my games!',
+  '\n\nCheck out the downloads!',
+  '\n\n..Find any secrets :)',
+  '\n\nCheck out my YouTube and Github!',
 ];
 
 let currentText = -1;

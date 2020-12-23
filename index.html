@@ -11,7 +11,21 @@
         <meta name="google-site-verification" content="PlLns8O5LKPKD4hcBvY-_7ZxKtT7M2iaSr6dY0VLMfI" />
     </head>
     <body>
-        <script src=“js/main.js”></script>
+        <script>
+        var text = [
+	        'Play my games!',
+	        'Check out the downloads!',
+        	'..Find any secrets :)',
+        	'Check out my YouTube and Github!'
+        ];
+
+        var currentText = -1;
+
+
+        var textInterval = setInterval(function() {
+            document.getElementById('textCarousel').text = text[(++currentText) % text.length];
+        }, 2000);
+        </script>
 
         <a href="pages/Downloads/secret.html">Home</a>
         <div class="header">

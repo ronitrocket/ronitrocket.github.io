@@ -113,6 +113,11 @@ a {
     width: 40%;
 }
 
+#textCarousel {
+    text-align: center;
+    font-size: 350%;
+}
+
 ul {
     list-style-type: none;
     margin: 0;

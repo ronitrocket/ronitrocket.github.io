@@ -115,7 +115,8 @@ a {
 
 #textCarousel {
     text-align: center;
-    font-size: 350%;
+    font-size: 250%;
+    font-family: Arial;
 }
 
 ul {

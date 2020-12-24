@@ -122,6 +122,14 @@ a {
     width: 40%;
 }
 
+.secret a:link, .secret a:visited, .secret a:hover, .secret a:active {
+    font-size: 50%;
+    color: #800000;
+    padding: 0px;
+    margin: 0px;
+    height: 0px;
+}
+
 #textCarousel {
     text-align: center;
     font-size: 150%;

@@ -20,7 +20,7 @@ for (;;) {
     for (i = 0; i < text.length; i++) {
         const string = "";
         for (x = 0; x < text[i].length; x++) {
-            string = string + charAt(text[i].charAt(x));
+            string = string + text[i].charAt(x);
             document.getElementById('textCarousel').innerHTML = string;
             sleep(100);
         }

@@ -37,6 +37,13 @@ a {
     color: white;
 }
 
+.headerText {
+    padding: 8px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
 .navbar {
     display: flex;
     background-color: #333;

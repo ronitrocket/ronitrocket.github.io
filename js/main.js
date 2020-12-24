@@ -25,7 +25,7 @@ for (;;) {
             sleep(100);
         }
         sleep(4000);
-        for (y = 0;  < text[i].length; y++) {
+        for (y = 0; y < text[i].length; y++) {
             string = string.substring(0, string.length - 1);
             document.getElementById('textCarousel').innerHTML = string;
             sleep(100);

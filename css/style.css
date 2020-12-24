@@ -41,7 +41,9 @@ a {
     padding: 8px;
     text-align: center;
     background: #1abc9c;
+    font-size: 150%;
     color: white;
+    font-family: Arial;
 }
 
 .navbar {

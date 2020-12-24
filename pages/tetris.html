@@ -12,7 +12,15 @@
     <div class="header">
         <img src="../images/Website Header.png"/>
     </div>
-
+    <div class="headerText">
+            <div id="typed-strings">
+                <p>Play my games!</p>
+                <p>Check out the downloads!</p>
+                <p>Check out my YouTube and Github!</p>
+                <p>..Find any secrets :)</p>
+            </div>
+            <span id="typed"></span>
+        </div>
     <div class="navbar">
         <a href="../index.html">Home</a>
         <a href="games.html">Games</a>
@@ -33,5 +41,16 @@
             </div>
         </div>
     </div>
+    <script>
+            var typed = new Typed('#typed',{
+                stringsElement: '#typed-strings',
+                backSpeed: 40,
+                typeSpeed: 40,
+                loop: true,
+                cursorChar: '_',
+                startDelay: 2000,
+                backDelay: 1400
+            });
+        </script>
 </body>
 </html>

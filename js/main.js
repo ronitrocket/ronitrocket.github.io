@@ -21,13 +21,13 @@ for (;;) {
         let string = "";
         for (x = 0; x < text[i].length; x++) {
             string = string + text[i].charAt(x);
-            document.getElementById('textCarousel').innerHTML = string;
+            document.getElementById('textCarousel').textContent = string;
             sleep(100);
         }
         sleep(4000);
         for (y = 0; y < text[i].length; y++) {
             string = string.substring(0, string.length - 1);
-            document.getElementById('textCarousel').innerHTML = string;
+            document.getElementById('textCarousel').textContent = string;
             sleep(100);
         }
     }

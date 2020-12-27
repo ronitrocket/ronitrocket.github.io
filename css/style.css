@@ -122,6 +122,19 @@ a {
     padding-top: 1px;
 }
 
+.cardPass {
+    background-color: #ededed;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cardPass input {
+    background-color: #ededed;
+    padding: 5px;
+    margin-top: 5px;
+}
+
 .cardHeader {
     background-color: #bababa;
     padding: 20px;

@@ -52,6 +52,8 @@
                     <input type="text" value="Password" id="passLogin">
                     <label><br/><br/></label>
                     <input type="button" value="Login" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
+                    <label><br/></label>
+                    <input type="button" value="Login" id="loginButton" onclick="logout()">
                 </div>
                 <label><br/></label>
                 <div class= "cardPass">
@@ -160,6 +162,11 @@
                 });
             }
 
+            function logout() {
+
+                Cookies.set("isLoggedIn", "false");
+            }
+
             function login(user,pass) {
 
                 var sameUser = false;
@@ -177,7 +184,7 @@
                     
                         if (sameUser && samePass) {
                         
-                            Cookies.set('isLoggedIn', 'true')
+                            Cookies.set('isLoggedIn', 'true');
                             document.getElementById('loginButton').value = "Logged in!";
                         } else {
 

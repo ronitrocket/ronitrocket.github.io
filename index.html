@@ -52,8 +52,10 @@
                     <input type="text" placeholder="Password" id="passLogin">
                     <label><br/><br/></label>
                     <input type="button" value="Login" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
-                    <label><br/></label>
-                    <input type="button" value="Logout" id="loginButton" onclick="logout()">
+                    <div class-"errorMessage">
+                        <label id="errorLogin"></label>
+                    </div>
+                    <input type="button" value="Logout" onclick="logout()">
                 </div>
                 <label><br/></label>
                 <div class= "cardPass">
@@ -61,6 +63,9 @@
                     <input type="text" placeholder="Username" id="userRegister">
                     <label><br/></label>
                     <input type="text" placeholder="Password" id="passRegister">
+                    <div class-"errorMessage">
+                        <label id="errorRegister"></label>
+                    </div>
                     <label><br/><br/></label>
                     <input type="button" value="Register" id="loginButton" onclick="checkIfUsernameExists(document.getElementById('userRegister').value, document.getElementById('passRegister').value)">
                 </div>
@@ -155,15 +160,17 @@
                             username: user,
                             password: pass
                         });
+                        document.getElementById('errorRegister').value = "";
                     } else {
 
-                        document.getElementById('userRegister').value = "Username has been taken!";
+                        document.getElementById('errorRegister').value = "Username has been taken!";
                     }
                 });
             }
 
             function logout() {
-
+                
+                document.getElementById('loginButton').value = "Login";
                 Cookies.set("isLoggedIn", "false");
             }
 
@@ -186,9 +193,10 @@
                         
                             Cookies.set('isLoggedIn', 'true');
                             document.getElementById('loginButton').value = "Logged in!";
+                            document.getElementById('errorLogin').value = "";
                         } else {
 
-                            document.getElementById('userLogin').value = "Incorrect login info!";
+                            document.getElementById('errorLogin').value = "Incorrect login info!";
                         }
                     });
                 } else {

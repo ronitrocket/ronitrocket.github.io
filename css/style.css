@@ -135,6 +135,10 @@ a {
     margin-top: 5px;
 }
 
+.errorMessage {
+    color: #960018;
+}
+
 .cardHeader {
     background-color: #bababa;
     padding: 20px;

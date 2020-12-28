@@ -31,7 +31,7 @@
         <div class="navbar">
             <a href="index.html">Home</a>
             <a href="pages/games.html">Games</a>
-            <a href="pages/downloads.html">Downloads</a>
+            <a onclick="jsfunction()" href="javascript:void(0);">Downloads</a>
             <a href="pages/about.html">About</a>
         </div>
 
@@ -177,7 +177,7 @@
 
                 var sameUser = false;
                 var samePass = false;
-                if (Cookies.get("isLoggedIn") == "false") {
+                if (Cookies.get("isLoggedIn") != "true") {
                     db.collection("login-entries").get().then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
                             if (doc.get("username") == user) {
@@ -201,6 +201,15 @@
                 } else {
 
                     document.getElementById('loginButton').value = "Already logged in!";
+                }
+            }
+
+            function openDownloadPage() {
+
+                if (Cookies.get("isLoggedIn") == "true") {
+                    window.location="pages/downloads.html"
+                } else {
+                    window.alert("Please login/register on the homepage!");
                 }
             }
 

@@ -55,16 +55,24 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script>
-            var typed = new Typed('#typed',{
-                stringsElement: '#typed-strings',
-                backSpeed: 40,
-                typeSpeed: 40,
-                loop: true,
-                cursorChar: '_',
-                startDelay: 2000,
-                backDelay: 1400
-            });
-        </script>
+        
+        if (Cookies.get("isLoggedIn") != "true") {
+            
+            window.alert("Login first!");
+            window.location("../index.html");
+        }
+        
+        var typed = new Typed('#typed',{
+            stringsElement: '#typed-strings',
+            backSpeed: 40,
+            typeSpeed: 40,
+            loop: true,
+            cursorChar: '_',
+            startDelay: 2000,
+            backDelay: 1400
+        });
+    </script>
 </body>
 </html>

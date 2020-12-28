@@ -52,7 +52,7 @@
                     <input type="text" placeholder="Password" id="passLogin">
                     <label><br/><br/></label>
                     <input type="button" value="Login" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
-                    <div class-"errorMessage">
+                    <div class="errorMessage">
                         <label id="errorLogin"></label>
                     </div>
                     <input type="button" value="Logout" onclick="logout()">
@@ -63,7 +63,7 @@
                     <input type="text" placeholder="Username" id="userRegister">
                     <label><br/></label>
                     <input type="text" placeholder="Password" id="passRegister">
-                    <div class-"errorMessage">
+                    <div class="errorMessage">
                         <label id="errorRegister"></label>
                     </div>
                     <label><br/><br/></label>
@@ -160,10 +160,10 @@
                             username: user,
                             password: pass
                         });
-                        document.getElementById('errorRegister').value = "";
+                        document.getElementById('errorRegister').innerHTML = "";
                     } else {
 
-                        document.getElementById('errorRegister').value = "Username has been taken!";
+                        document.getElementById('errorRegister').innerHTML = "Username has been taken!";
                     }
                 });
             }
@@ -193,10 +193,10 @@
                         
                             Cookies.set('isLoggedIn', 'true');
                             document.getElementById('loginButton').value = "Logged in!";
-                            document.getElementById('errorLogin').value = "";
+                            document.getElementById('errorLogin').innerHTML = "";
                         } else {
 
-                            document.getElementById('errorLogin').value = "Incorrect login info!";
+                            document.getElementById('errorLogin').innerHTML = "Incorrect login info!";
                         }
                     });
                 } else {

@@ -46,12 +46,21 @@
                     <a href="YoinkExecutor.rar" download>hi</a>
                 </div>
                 <div class= "cardPass">
-                    <label>Register:<br/></label>
-                    <input type="text" value="Username" id="user">
+                    <label>Login:<br/></label>
+                    <input type="text" value="Username" id="userLogin">
                     <label><br/></label>
-                    <input type="text" value="Password" id="pass">
+                    <input type="text" value="Password" id="passLogin">
                     <label><br/><br/></label>
-                    <input type="button" value="Click me" onclick="checkIfUsernameExists(document.getElementById('user').value, document.getElementById('pass').value)">
+                    <input type="button" value="Click me" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
+                </div>
+                <label><br/></label>
+                <div class= "cardPass">
+                    <label>Register:<br/></label>
+                    <input type="text" value="Username" id="userRegister">
+                    <label><br/></label>
+                    <input type="text" value="Password" id="passRegister">
+                    <label><br/><br/></label>
+                    <input type="button" value="Click me" id="loginButton" onclick="checkIfUsernameExists(document.getElementById('userRegister').value, document.getElementById('passRegister').value)">
                 </div>
             </div>
             <div class="main">
@@ -128,25 +137,73 @@
                 var sameName = false;
                 db.collection("login-entries").get().then((querySnapshot) => {
                     querySnapshot.forEach((doc) => {
-                        if (document.exists) {
-                            console.log(doc.get("username"));
-                            console.log(user);
-                            if (doc.get("username") == user) {
-                                sameName = true;
-                            }
+                        if (doc.get("username") == user) {
+                            sameName = true;
                         }
                     });
-                    console.log(sameName);
+                    
                     if (!sameName) {
                         db.collection("login-entries").add({
                             username: user,
                             password: pass
                         });
+                    } else {
+
+                        document.getElementById('userRegister').value = "Username has been taken!";
                     }
                 });
             }
 
+            function login(user,pass) {
 
+                var sameUser = false;
+                var samePass = false;
+                if (getCookie("isLoggedIn") != "" || getCookie("isLoggedIn") == "false" || document.cookie == "") {
+                    db.collection("login-entries").get().then((querySnapshot) => {
+                        querySnapshot.forEach((doc) => {
+                            if (doc.get("username") == user) {
+                                sameUser = true;
+                            }
+                            if (doc.get("password") == pass) {
+                                samePass = true;
+                            }
+                        });
+                    
+                        if (sameUser && samePass) {
+                        
+                            document.cookie = "isLoggedIn=true";
+                            document.getElementById('loginButton').value = "Logged in!";
+                        } else {
+
+                            document.getElementById('userLogin').value = "Incorrect login info!";
+                        }
+                    });
+                } else {
+
+                    document.getElementById('loginButton').value = "Already logged in!";
+                }
+            }
+
+            function setCookie(cname, cvalue) {
+                document.cookie = cname + "=" + cvalue + ";" + "path=/";
+            }
+
+            function getCookie(cname) {
+                console.log("document.cookie is: " + document.cookie)
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
         </script>
     </body>
 </html>

@@ -164,7 +164,7 @@
 
                 var sameUser = false;
                 var samePass = false;
-                if (Cookies.get("isLoggedIn" == "false")) {
+                if (Cookies.get("isLoggedIn") == "false") {
                     db.collection("login-entries").get().then((querySnapshot) => {
                         querySnapshot.forEach((doc) => {
                             if (doc.get("username") == user) {

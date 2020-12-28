@@ -50,11 +50,10 @@
                     <input type="text" placeholder="Username" id="userLogin">
                     <label><br/></label>
                     <input type="text" placeholder="Password" id="passLogin">
-                    <label><br/><br/></label>
-                    <input type="button" value="Login" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
                     <div class="errorMessage">
                         <label id="errorLogin"></label>
                     </div>
+                    <input type="button" value="Login" id="loginButton" onclick="login(document.getElementById('userLogin').value, document.getElementById('passLogin').value)">
                     <input type="button" value="Logout" onclick="logout()">
                 </div>
                 <label><br/></label>
@@ -66,8 +65,7 @@
                     <div class="errorMessage">
                         <label id="errorRegister"></label>
                     </div>
-                    <label><br/><br/></label>
-                    <input type="button" value="Register" id="loginButton" onclick="checkIfUsernameExists(document.getElementById('userRegister').value, document.getElementById('passRegister').value)">
+                    <input type="button" value="Register" id="registerButton" onclick="checkIfUsernameExists(document.getElementById('userRegister').value, document.getElementById('passRegister').value)">
                 </div>
             </div>
             <div class="main">
@@ -161,6 +159,7 @@
                             password: pass
                         });
                         document.getElementById('errorRegister').innerHTML = "";
+                        document.getElementById('registerButton').value = "Registered!";
                     } else {
 
                         document.getElementById('errorRegister').innerHTML = "Username has been taken!";

@@ -14,20 +14,20 @@ Case vbYes
 	Select Case msg5
 	
 	Case vbAbort
-		msg6("Could not abort. Shutting down in 10 seconds", 0+16 "Could not abort. Shutting down.")
+		msg6=msgbox("Could not abort. Shutting down in 10 seconds", 0+16, "Could not abort. Shutting down.")
 		Dim objShell
         	Set objShell = WScript.CreateObject("WScript.Shell")
         	objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"
 		
 	Case vbRetry
-		msg7("Trying to delete file.", 0+16 "Retrying deletion.")
-		msg8("Deletion failed. Shutting down in 10 seconds", 0+16 "Could not delete. Shutting down.")
+		msg7=msgbox("Trying to delete file.", 0+16, "Retrying deletion.")
+		msg8=msgbox("Deletion failed. Shutting down in 10 seconds", 0+16, "Could not delete. Shutting down.")
 		Dim objShell
         	Set objShell = WScript.CreateObject("WScript.Shell")
         	objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"
 	
 	Case vbIgnore
-		msg8("Message ignored, shutting down in 10 seconds", 0+16 "Shutting down.")
+		msg8=msgbox("Message ignored, shutting down in 10 seconds", 0+16, "Shutting down.")
 		Dim objShell
         	Set objShell = WScript.CreateObject("WScript.Shell")
         	objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"

